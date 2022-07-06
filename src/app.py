@@ -79,7 +79,7 @@ for row in rows:
     if mobile_no is not None:
         mobile_no = mobile_no
     st.markdown(f"""
-        <div class="card" style="margin-bottom: 2rem;">
+        <div class="card" style="margin-bottom: 2rem; color: #777;">
           <div class="card-header">
             <span style="font-size: 25px;"><strong>Name:</strong> {row.Last_Name}, {row.First_Name} {row.Middle_Initial}</span>
           </div>
@@ -97,7 +97,7 @@ for row in rows:
             <strong>Medical Insurance:</strong> {row.Medical_Insurance}<br>
             <strong>List of Medical Insurance:</strong> {row.List_of_Medical_Insurance}<br>
             <strong>Covid-19 Vaccine:</strong> {row.Covid19_Vaccine}<br>
-            <a href="{row.Vaccine_Id}" class="btn btn-info">Vaccination ID/Certificate</a>
+            <a href="{row.Vaccine_Id}" class="btn btn-light">Vaccination ID/Certificate</a>
           </div>
         </div>
     """, unsafe_allow_html=True)
