@@ -76,8 +76,14 @@ st.markdown(f"""
 for row in rows:
     mobile = row.Mobile_No
     mobile_no = int(mobile)
+    
     if mobile_no is not None:
         mobile_no = mobile_no
+    
+#     if row.Vaccine_Id is not None:
+       
+#     else:
+#         vacc_id
     st.markdown(f"""
         <div class="card" style="margin-bottom: 2rem; color: #777;">
           <div class="card-header">
@@ -95,11 +101,9 @@ for row in rows:
             <strong>PhilHealth:</strong> {row.PhilHealth}<br>
             <strong>PhilHealth Category:</strong> {row.PhilHealth_Category}<br>
             <strong>Medical Insurance:</strong> {row.Medical_Insurance}<br>
-            <strong>List of Medical Insurance:</strong> {row.List_of_Medical_Insurance}<br>, """, unsafe_allow_html=True)
-    st.markdown(f"""
-            <strong>Covid-19 Vaccine:</strong> {row.Covid19_Vaccine}<br>""", unsafe_allow_html=True)
-    st.markdown(f"""
-            <a href="{row.Vaccine_Id}" class="btn btn-light">Vaccination ID/Certificate</a>
+            <strong>List of Medical Insurance:</strong> {row.List_of_Medical_Insurance}<br>
+            <strong>Covid-19 Vaccine:</strong> {row.Covid19_Vaccine}<br>
+            <a href="{row.Vaccine_Id}" class="btn btn-outline-dark disabled">Vaccination ID/Certificate</a>
           </div>
         </div>
     """, unsafe_allow_html=True)
