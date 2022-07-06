@@ -95,8 +95,10 @@ for row in rows:
             <strong>PhilHealth:</strong> {row.PhilHealth}<br>
             <strong>PhilHealth Category:</strong> {row.PhilHealth_Category}<br>
             <strong>Medical Insurance:</strong> {row.Medical_Insurance}<br>
-            <strong>List of Medical Insurance:</strong> {row.List_of_Medical_Insurance}<br>
-            <strong>Covid-19 Vaccine:</strong> {row.Covid19_Vaccine}<br>
+            <strong>List of Medical Insurance:</strong> {row.List_of_Medical_Insurance}<br>, """, unsafe_allow_html=True)
+    st.markdown(f"""
+            <strong>Covid-19 Vaccine:</strong> {row.Covid19_Vaccine}<br>""", unsafe_allow_html=True)
+    st.markdown(f"""
             <a href="{row.Vaccine_Id}" class="btn btn-light">Vaccination ID/Certificate</a>
           </div>
         </div>
