@@ -93,7 +93,7 @@ for row in rows:
           <div class="card-body">
             <strong>Permanent Address:</strong> {row.Permanent_Address}<br>
             <strong>Current Address:</strong> {row.Current_Address}<br
-            <strong>Leaving With:</strong> {row.Leaving_With}<br>
+            <span><strong>Leaving With:</strong></span> {row.Leaving_With}<br>
             <strong>Mother/Mobile No.:</strong> {row.Mother_and_Mobile}<br>
             <strong>Father/Mobile:</strong> {row.Father_and_Mobile}<br>
             <strong>Emergency Contact Person:</strong> {row.Emergency_Contact_Person}<br>
