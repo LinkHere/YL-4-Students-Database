@@ -46,7 +46,6 @@ if selected:
         else:
             btn_state = "disabled"
 
-<<<<<<< HEAD
         st.markdown(f"""
             <div class="card" style="margin-bottom: 2rem; color: #777;">
               <div class="card-header">
@@ -70,77 +69,6 @@ if selected:
               </div>
             </div>
         """, unsafe_allow_html=True)
-=======
-if selected == "Block 1-A":
-    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="1-A"')
-                           
-if selected == "Block 1-B":
-    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="1-B"')
-    
-if selected == "Block 2-A":
-    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="2-A"')
-
-if selected == "Block 2-B":
-    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="2-B"')
-
-if selected == "Block 3-A":
-    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="3-A"')
-
-if selected == "Block 3-B":
-    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="3-B"')
-    
-if selected == "Block 4-A":
-    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="4-A"')
-
-if selected == "Block 4-B":
-    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="4-B"')
-    
-if selected == "Block 5-A":
-    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="5-A"')
-    
-if selected == "Block 5-B":
-    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="5-B"')
-
-st.markdown(f"""
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-""", unsafe_allow_html=True)
-
-for row in rows:
-    mobile = row.Mobile_No
-    mobile_no = int(mobile)
-    
-    if mobile_no is not None:
-        mobile_no = mobile_no
-    
-    if row.Vaccine_Id is not None:
-        btn_state = ""
-    else:
-        btn_state = "disabled"
-    
-    st.markdown(f"""
-        <div class="card" style="margin-bottom: 2rem; color: #777;">
-          <div class="card-header">
-            <span style="font-size: 25px;"><strong>Name:</strong> {row.Last_Name}, {row.First_Name} {row.Middle_Initial}</span>
-          </div>
-          <div class="card-body">
-            <strong>Permanent Address:</strong> {row.Permanent_Address}<br>
-            <strong>Current Address:</strong> {row.Current_Address}<br
-            <span><strong>Leaving With:</strong></span> {row.Leaving_With}<br>
-            <strong>Mother/Mobile No.:</strong> {row.Mother_and_Mobile}<br>
-            <strong>Father/Mobile:</strong> {row.Father_and_Mobile}<br>
-            <strong>Emergency Contact Person:</strong> {row.Emergency_Contact_Person}<br>
-            <strong>Email:</strong> {row.CEU_Mail}<br>
-            <strong>Mobile No.:</strong> {mobile_no}<br>
-            <strong>PhilHealth:</strong> {row.PhilHealth}<br>
-            <strong>PhilHealth Category:</strong> {row.PhilHealth_Category}<br>
-            <strong>Medical Insurance:</strong> {row.Medical_Insurance}<br>
-            <strong>List of Medical Insurance:</strong> {row.List_of_Medical_Insurance}<br>
-            <strong>Covid-19 Vaccine:</strong> {row.Covid19_Vaccine}<br>
-            <a href="{row.Vaccine_Id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
-          </div>
-        </div>
-    """, unsafe_allow_html=True)
->>>>>>> a815a7700a0919d57e5c37f97d6f62b115ef64f8
 
 st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
