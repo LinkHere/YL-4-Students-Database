@@ -20,7 +20,6 @@ conn = connect(credentials=credentials)
 
 @st.cache(ttl=600)
 def run_query(query):
-    st.write("Cache miss: run_query(", query, ") ran")
     rows = conn.execute(query, headers=1)
     rows = rows.fetchall()
     return rows
