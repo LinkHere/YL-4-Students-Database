@@ -46,8 +46,8 @@ sheet_url = st.secrets["private_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 for i, row in enumerate(rows):
-    st.write(i)
-    st.write(row)
+    st.text(i)
+    st.text(row)
 #     st.markdown(f"""
 #         <div class="card" style="margin-bottom: 2rem; color: #777;">
             
