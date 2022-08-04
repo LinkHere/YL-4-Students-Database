@@ -47,7 +47,7 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 for i, row in enumerate(rows):
     st.text(i)
-    st.text(row)
+    st.text(f"{row.Last_Name}")
 #     st.markdown(f"""
 #         <div class="card" style="margin-bottom: 2rem; color: #777;">
             
