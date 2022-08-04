@@ -46,21 +46,22 @@ sheet_url = st.secrets["private_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 for row in rows:
-    st.markdown(f"""
-        <div class="card" style="margin-bottom: 2rem; color: #777;">
+    st.text(f"{row.Last_Name}")
+#     st.markdown(f"""
+#         <div class="card" style="margin-bottom: 2rem; color: #777;">
             
-            <div class="card-header">
-                <span style="font-size: 25px;"><strong>Name:</strong> {row.Last_Name}, {row.First_Name} {row.Middle_Initial}</span>
-            </div>
+#             <div class="card-header">
+#                 <span style="font-size: 25px;"><strong>Name:</strong> {row.Last_Name}, {row.First_Name} {row.Middle_Initial}</span>
+#             </div>
             
-            <div class="card-body">
-                <strong>Permanent Address:</strong> {row.Permanent_Address}<br>
-                <strong>Current Address:</strong> {row.Current_Address}<br
-                <strong>Leaving With:</strong> {row.Staying_with_relatives}<br>
-            </div>
+#             <div class="card-body">
+#                 <strong>Permanent Address:</strong> {row.Permanent_Address}<br>
+#                 <strong>Current Address:</strong> {row.Current_Address}<br
+#                 <strong>Leaving With:</strong> {row.Staying_with_relatives}<br>
+#             </div>
             
-        </div>
-    """, unsafe_allow_html=True)
+#         </div>
+#     """, unsafe_allow_html=True)
 #         st.markdown(f"""
 #             <div class="card" style="margin-bottom: 2rem; color: #777;">
 #               <div class="card-header">
