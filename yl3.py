@@ -56,7 +56,7 @@ for row in rows:
             <div class="card-body">
                 <strong>Permanent Address:</strong> {row.Permanent_Address}<br>
                 <strong>Current Address:</strong> {row.Current_Address}<br
-                <strong>Leaving With:</strong> {row.Staying_with_relatives?}<br>
+                <strong>Leaving With:</strong> {row.Staying_with_relatives}<br>
             </div>
             
         </div>
