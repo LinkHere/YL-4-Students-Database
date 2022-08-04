@@ -60,7 +60,7 @@ for row in rows:
             </div>
             
         </div>
-    """)
+    """, unsafe_allow_html=True)
 #         st.markdown(f"""
 #             <div class="card" style="margin-bottom: 2rem; color: #777;">
 #               <div class="card-header">
