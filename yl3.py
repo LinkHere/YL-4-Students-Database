@@ -45,8 +45,9 @@ sheet_url = st.secrets["private_gsheets_url"]
 #             btn_state = "disabled"
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
-for row in rows:
-    st.text(type(row.Last_Name))
+for i, row in enumerate(rows):
+    st.write(i)
+    st.write(row)
 #     st.markdown(f"""
 #         <div class="card" style="margin-bottom: 2rem; color: #777;">
             
