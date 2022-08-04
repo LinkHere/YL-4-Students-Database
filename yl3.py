@@ -45,7 +45,7 @@ sheet_url = st.secrets["private_gsheets_url"]
 #             btn_state = "disabled"
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
-for row in enumerate(rows):
+for i, row in enumerate(rows):
     st.markdown(f"""
         {row.Last_Name}
     """, unsafe_allow_html=True)
