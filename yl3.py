@@ -46,17 +46,6 @@ sheet_url = st.secrets["private_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 for itrs, row in enumerate(rows):
-#     st.markdown(f"""
-#         <div class="card" style="margin-bottom: 2rem; color: #777;">
-#             <div class="card-header">
-#                 <span style="font-size: 25px;"><strong>Name:</strong> {row.Last_Name}, {row.First_Name} {row.Middle_Initial}</span>
-#             </div>
-             
-#                 <strong>Permanent Address:</strong> {row.Permanent_Address}<br>
-#                 <strong>Current Address:</strong> {row.Current_Address}<br
-#         </div>
-#     """, unsafe_allow_html=True)
-
     st.markdown(f"""
         <div class="card">
           <div class="card-header">
@@ -66,8 +55,11 @@ for itrs, row in enumerate(rows):
             <h5 class="card-title">Details</h5>
             <p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
             <strong>Current Address:</strong> {row.Current_Address}</br>
-            <strong>Staying with Relatives?:</strong> {row.Permanent_Address}</br>
-            <strong>Staying with other SOM Students:</strong> {row.Permanent_Address}</br>
+            <strong>Staying with Relatives?:</strong> {row.Staying_with_relatives}</br>
+            <strong>Staying with other SOM Students?:</strong> {row.Staying_with_other_SOM_Students}</br>
+            <strong>Staying with:</strong> {row.Staying_with}</br>
+            <strong>Father's Name and No.:</strong> {row.Father_and_No}</br>
+            <strong>Mother' Name and No.:</strong> {row.Mother_and_No}</br>
             </p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
