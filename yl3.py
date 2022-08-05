@@ -60,11 +60,10 @@ for itr, row in enumerate(rows):
     st.markdown(f"""
         <div class="card">
       <div class="card-header">
-        Featured
+        <span style="font-size: 25px;"><strong>Name:</strong> {row.Last_Name}, {row.First_Name} {row.Middle_Initial}</span>
       </div>
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h6 class="card-title">Permanent Address</h6><p class="card-text">{row.Permanent_Address}</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>   
