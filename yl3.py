@@ -64,10 +64,11 @@ for itrs, row in enumerate(rows):
           </div>
           <div class="card-body">
             <h5 class="card-title">Details</h5>
-            <p class="card-text">{row.Permanent_Address}</p>
-            <p class="card-text">{row.Permanent_Address}</p>
-            <p class="card-text">{row.Permanent_Address}</p>
-            <p class="card-text">{row.Permanent_Address}</p>
+            <p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
+            <strong>Current Address:</strong> {row.Current_Address}</br>
+            <strong>Staying with Relatives?:</strong> {row.Permanent_Address}</br>
+            <strong>Staying with other SOM Students:</strong> {row.Permanent_Address}</br>
+            </p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div> 
