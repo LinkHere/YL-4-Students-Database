@@ -63,8 +63,8 @@ for itrs, row in enumerate(rows):
             <strong>Emergency Contact Person:</strong> {row.Emergency_contact}</br>
             <strong>CEU Mail:</strong> {row.CEU_mail}</br>
             <strong>Mobile No.:</strong> {row.Mobile_no}</br>
-            <strong>PhilHealth?:</strong> {row.Philhealth}</br>
-            <strong>PhilHealth Category:</strong> {row.Philhealth_category}</br>
+            <strong>PhilHealth?:</strong> {row.PhilHealth}</br>
+            <strong>PhilHealth Category:</strong> {row.PhilHealth_category}</br>
             <strong>Other Medical Insurance?:</strong> {row.Other_Medical_Insurance}</br>
             <strong>Medical Insurances:</strong> {row.Medical_Insurances}</br>
             <strong>Covid19 Vaccine?</strong> {row.Covid19_vaccine}</br>
