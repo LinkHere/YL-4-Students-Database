@@ -45,7 +45,7 @@ sheet_url = st.secrets["private_gsheets_url"]
 #             btn_state = "disabled"
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
-# for itr, row in enumerate(rows):
+for itr, row in enumerate(rows):
 #     st.markdown(f"""
 #         <div class="card" style="margin-bottom: 2rem; color: #777;">
 #             <div class="card-header">
@@ -57,18 +57,18 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 #         </div>
 #     """, unsafe_allow_html=True)
 
-st.markdown(f"""
-    <div class="card">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>   
-""", unsafe_allow_html=True)
+    st.markdown(f"""
+        <div class="card">
+      <div class="card-header">
+        Featured
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>   
+    """, unsafe_allow_html=True)
 
 st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
