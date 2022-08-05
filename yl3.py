@@ -45,7 +45,7 @@ sheet_url = st.secrets["private_gsheets_url"]
 #             btn_state = "disabled"
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
-for row in rows:
+for itrs, row in enumerate(rows):
 #     st.markdown(f"""
 #         <div class="card" style="margin-bottom: 2rem; color: #777;">
 #             <div class="card-header">
@@ -64,6 +64,7 @@ for row in rows:
             </div>
       
             <div class="card-body">
+                <h5 class="card-title">Details</h5>
                 <p class="card-text">Permanent Address{row.Permanent_Address}</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
