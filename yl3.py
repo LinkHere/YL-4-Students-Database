@@ -40,14 +40,20 @@ if selected:
 #         if mobile is not None:
 #             mobile = mobile
 
-#         if row.Vaccine_Id is not None:
-#             btn_state = ""
-#         else:
-#             btn_state = "disabled"
+        if row.Vaccine_Id is not None:
+            btn_state = ""
+        else:
+            btn_state = "disabled"
 #rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
     for itrs, row in enumerate(rows):
         mobile = int(row.Mobile_no)
+        
+        if row.Vaccine_Id is not None:
+            btn_state = ""
+        else:
+            btn_state = "disabled"
+        
         st.markdown(f"""
             <div class="card" style="margin-bottom: 2rem; color: #777;">
               <div class="card-header">
@@ -64,7 +70,7 @@ if selected:
                 <strong>Mother' Name and No.:</strong> {row.Mother_and_No}</br>
                 <strong>Emergency Contact Person:</strong> {row.Emergency_contact}</br>
                 <strong>CEU Mail:</strong> {row.CEU_mail}</br>
-                <strong>Mobile No.:</strong> {mobile}</br>
+                <strong>Mobile No.:</strong> {int(row.Mobile_no)}</br>
                 <strong>PhilHealth?:</strong> {row.PhilHealth}</br>
                 <strong>PhilHealth Category:</strong> {row.PhilHealth_category}</br>
                 <strong>Other Medical Insurance?:</strong> {row.Other_Medical_Insurance}</br>
