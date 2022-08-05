@@ -53,7 +53,7 @@ for itrs, row in enumerate(rows):
           </div>
           <div class="card-body">
             <h5 class="card-title">{row.Last_Name}, {row.First_Name} {row.Middle_Initial}</h5>
-            <p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
+            <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
             <strong>Current Address:</strong> {row.Current_Address}</br>
             <strong>Staying with Relatives?:</strong> {row.Staying_with_relatives}</br>
             <strong>Staying with other SOM Students?:</strong> {row.Staying_with_other_SOM_Students}</br>
@@ -69,7 +69,7 @@ for itrs, row in enumerate(rows):
             <strong>Medical Insurances:</strong> {row.Medical_Insurances}</br>
             <strong>Covid19 Vaccine?</strong> {row.Covid19_vaccine}</br>
             <strong>Vaccine ID:</strong> {row.Vaccine_id}</br>
-            </p>
+            </p></em>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div> 
