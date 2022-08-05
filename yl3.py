@@ -28,9 +28,9 @@ sheet_url = st.secrets["private_gsheets_url"]
 with st.sidebar:
     selected = option_menu("Main Menu", ["Section A", "Section B"], menu_icon="house", default_index=0)
 
-# if selected:
-#     selected = selected.replace('Block ', '')
-#     rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Block="{selected}"')
+if selected:
+    #selected = selected.replace('Block ', '')
+    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="{selected}"')
 
 #     for row in rows:
 #         mobile = row.Mobile_No
@@ -43,37 +43,37 @@ with st.sidebar:
 #             btn_state = ""
 #         else:
 #             btn_state = "disabled"
-rows = run_query(f'SELECT * FROM "{sheet_url}"')
+#rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
-for itrs, row in enumerate(rows):
-    st.markdown(f"""
-        <div class="card">
-          <div class="card-header">
-          Year Level 3
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"><u><i>{row.Last_Name}</i>, {row.First_Name} {row.Middle_Initial}</u></h5>
-            <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
-            <strong>Current Address:</strong> {row.Current_Address}</br>
-            <strong>Staying with Relatives?:</strong> {row.Staying_with_relatives}</br>
-            <strong>Staying with other SOM Students?:</strong> {row.Staying_with_other_SOM_Students}</br>
-            <strong>Staying with:</strong> {row.Staying_with}</br>
-            <strong>Father's Name and No.:</strong> {row.Father_and_No}</br>
-            <strong>Mother' Name and No.:</strong> {row.Mother_and_No}</br>
-            <strong>Emergency Contact Person:</strong> {row.Emergency_contact}</br>
-            <strong>CEU Mail:</strong> {row.CEU_mail}</br>
-            <strong>Mobile No.:</strong> {row.Mobile_no}</br>
-            <strong>PhilHealth?:</strong> {row.PhilHealth}</br>
-            <strong>PhilHealth Category:</strong> {row.PhilHealth_category}</br>
-            <strong>Other Medical Insurance?:</strong> {row.Other_Medical_Insurance}</br>
-            <strong>Medical Insurances:</strong> {row.Medical_Insurances}</br>
-            <strong>Covid19 Vaccine?</strong> {row.Covid19_vaccine}</br>
-            <strong>Vaccine ID:</strong> {row.Vaccine_id}</br>
-            </p></em>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div> 
-    """, unsafe_allow_html=True)
+    for itrs, row in enumerate(rows):
+        st.markdown(f"""
+            <div class="card">
+              <div class="card-header">
+              Year Level 3 - {row.Section}
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><u><i>{row.Last_Name}</i>, {row.First_Name} {row.Middle_Initial}</u></h5>
+                <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
+                <strong>Current Address:</strong> {row.Current_Address}</br>
+                <strong>Staying with Relatives?:</strong> {row.Staying_with_relatives}</br>
+                <strong>Staying with other SOM Students?:</strong> {row.Staying_with_other_SOM_Students}</br>
+                <strong>Staying with:</strong> {row.Staying_with}</br>
+                <strong>Father's Name and No.:</strong> {row.Father_and_No}</br>
+                <strong>Mother' Name and No.:</strong> {row.Mother_and_No}</br>
+                <strong>Emergency Contact Person:</strong> {row.Emergency_contact}</br>
+                <strong>CEU Mail:</strong> {row.CEU_mail}</br>
+                <strong>Mobile No.:</strong> {row.Mobile_no}</br>
+                <strong>PhilHealth?:</strong> {row.PhilHealth}</br>
+                <strong>PhilHealth Category:</strong> {row.PhilHealth_category}</br>
+                <strong>Other Medical Insurance?:</strong> {row.Other_Medical_Insurance}</br>
+                <strong>Medical Insurances:</strong> {row.Medical_Insurances}</br>
+                <strong>Covid19 Vaccine?</strong> {row.Covid19_vaccine}</br>
+                <strong>Vaccine ID:</strong> {row.Vaccine_id}</br>
+                </p></em>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div> 
+        """, unsafe_allow_html=True)
 
 st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
