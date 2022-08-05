@@ -48,11 +48,11 @@ if selected:
 
     for itrs, row in enumerate(rows):
         st.markdown(f"""
-            <div class="card">
+            <div class="card" style="margin-bottom: 2rem; color: #777;">
               <div class="card-header">
               Year Level 3 - {row.Section}
               </div>
-              <div class="card-body" style="margin-bottom: 5px; color: #777;">
+              <div class="card-body">
                 <h5 class="card-title"><u><i>{row.Last_Name}</i>, {row.First_Name} {row.Middle_Initial}</u></h5>
                 <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
                 <strong>Current Address:</strong> {row.Current_Address}</br>
