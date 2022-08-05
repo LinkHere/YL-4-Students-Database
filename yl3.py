@@ -65,6 +65,9 @@ for itrs, row in enumerate(rows):
           <div class="card-body">
             <h5 class="card-title">Details</h5>
             <p class="card-text">{row.Permanent_Address}</p>
+            <p class="card-text">{row.Permanent_Address}</p>
+            <p class="card-text">{row.Permanent_Address}</p>
+            <p class="card-text">{row.Permanent_Address}</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div> 
