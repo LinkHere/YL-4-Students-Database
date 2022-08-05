@@ -47,9 +47,6 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 for itr, row in enumerate(rows):
     st.markdown(f"""
-        {row.Last_Name}
-    """, unsafe_allow_html=True)
-    st.markdown(f"""
         <div class="card" style="margin-bottom: 2rem; color: #777;">
             <div class="card-header">
                 <span style="font-size: 25px;"><strong>Name:</strong> {row.Last_Name}, {row.First_Name} {row.Middle_Initial}</span>
