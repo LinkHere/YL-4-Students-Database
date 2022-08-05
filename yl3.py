@@ -58,17 +58,16 @@ for itrs, row in enumerate(rows):
 #     """, unsafe_allow_html=True)
 
     st.markdown(f"""
-        <div class="card">
-            <div class="card-header">
-                <span style="font-size: 25px;"><strong>Name:</strong> {row.Last_Name}, {row.First_Name} {row.Middle_Initial}</span>
-            </div>
-      
-            <div class="card-body">
-                <h5 class="card-title">Details</h5>
-                <p class="card-text">Permanent Address{row.Permanent_Address}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>   
+<div class="card">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> 
     """, unsafe_allow_html=True)
 
 st.markdown(f"""
