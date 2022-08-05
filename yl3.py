@@ -33,21 +33,7 @@ if selected:
     #selected = selected.replace('Block ', '')
     rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="{selected}"')
 
-#     for row in rows:
-#         mobile = row.Mobile_No
-#         mobile = int(mobile)
-
-#         if mobile is not None:
-#             mobile = mobile
-
-        if row.Vaccine_Id is not None:
-            btn_state = ""
-        else:
-            btn_state = "disabled"
-#rows = run_query(f'SELECT * FROM "{sheet_url}"')
-
     for itrs, row in enumerate(rows):
-        mobile = int(row.Mobile_no)
         
         if row.Vaccine_Id is not None:
             btn_state = ""
