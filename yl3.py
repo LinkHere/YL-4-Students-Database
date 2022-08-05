@@ -31,7 +31,7 @@ with st.sidebar:
 
 if selected:
     #selected = selected.replace('Block ', '')
-    rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="{selected}"')
+    #rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Section="{selected}"')
 
 #     for row in rows:
 #         mobile = row.Mobile_No
