@@ -52,7 +52,7 @@ for itrs, row in enumerate(rows):
           Year Level 3
           </div>
           <div class="card-body">
-            <h5 class="card-title"><i>{row.Last_Name}, {row.First_Name} {row.Middle_Initial}</i></h5>
+            <h5 class="card-title"><i style="color:pink">{row.Last_Name}</i>, {row.First_Name} {row.Middle_Initial}</h5>
             <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
             <strong>Current Address:</strong> {row.Current_Address}</br>
             <strong>Staying with Relatives?:</strong> {row.Staying_with_relatives}</br>
