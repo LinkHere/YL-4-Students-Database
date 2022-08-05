@@ -35,6 +35,8 @@ if selected:
 
     for itrs, row in enumerate(rows):
         
+        if 
+        
         if row.Vaccine_id is not None:
             btn_state = ""
         else:
