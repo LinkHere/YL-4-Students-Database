@@ -59,14 +59,15 @@ for itr, row in enumerate(rows):
 
     st.markdown(f"""
         <div class="card">
-      <div class="card-header">
-        <span style="font-size: 25px;"><strong>Name:</strong> {row.Last_Name}, {row.First_Name} {row.Middle_Initial}</span>
-      </div>
-      <div class="card-body">
-        <h6 class="card-title">Permanent Address</h6><p class="card-text">{row.Permanent_Address}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>   
+            <div class="card-header">
+                <span style="font-size: 25px;"><strong>Name:</strong> {row.Last_Name}, {row.First_Name} {row.Middle_Initial}</span>
+            </div>
+      
+            <div class="card-body">
+                <p class="card-text"><strong>Permanent Address</strong>{row.Permanent_Address}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>   
     """, unsafe_allow_html=True)
 
 st.markdown(f"""
