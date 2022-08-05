@@ -70,9 +70,8 @@ if selected:
                 <strong>Other Medical Insurance?:</strong> {row.Other_Medical_Insurance}</br>
                 <strong>Medical Insurances:</strong> {row.Medical_Insurances}</br>
                 <strong>Covid19 Vaccine?</strong> {row.Covid19_vaccine}</br>
-                <strong>Vaccine ID:</strong> {row.Vaccine_id}</br>
                 </p></em>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="{row.Vaccine_id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
               </div>
             </div> 
         """, unsafe_allow_html=True)
