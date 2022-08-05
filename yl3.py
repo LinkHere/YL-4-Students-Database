@@ -52,7 +52,7 @@ if selected:
               <div class="card-header">
               Year Level 3 - {row.Section}
               </div>
-              <div class="card-body" style="margin-bottom: 1.5rem; color: #777;">
+              <div class="card-body" style="margin-bottom: 2rem; color: #777;">
                 <h5 class="card-title"><u><i>{row.Last_Name}</i>, {row.First_Name} {row.Middle_Initial}</u></h5>
                 <em><p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
                 <strong>Current Address:</strong> {row.Current_Address}</br>
