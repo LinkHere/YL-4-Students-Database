@@ -51,11 +51,9 @@ for itr, row in enumerate(rows):
             <div class="card-header">
                 <span style="font-size: 25px;"><strong>Name:</strong> {row.Last_Name}, {row.First_Name} {row.Middle_Initial}</span>
             </div>
-              
-            <div class="card-body">
+             
                 <strong>Permanent Address:</strong> {row.Permanent_Address}<br>
                 <strong>Current Address:</strong> {row.Current_Address}<br
-            </div>
         </div>
     """, unsafe_allow_html=True)
 
