@@ -64,7 +64,7 @@ for itr, row in enumerate(rows):
             </div>
       
             <div class="card-body">
-                <p class="card-text"><strong>Permanent Address</strong>{row.Permanent_Address}</p>
+                <p class="card-text">Permanent Address{row.Permanent_Address}</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>   
