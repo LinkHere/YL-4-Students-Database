@@ -45,33 +45,22 @@ sheet_url = st.secrets["private_gsheets_url"]
 #             btn_state = "disabled"
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
-for i, row in enumerate(rows):
+for itr, row in enumerate(rows):
     st.markdown(f"""
         {row.Last_Name}
     """, unsafe_allow_html=True)
-#         st.markdown(f"""
-#             <div class="card" style="margin-bottom: 2rem; color: #777;">
-#               <div class="card-header">
-#                 <span style="font-size: 25px;"><strong>Name:</strong> {row.Last_Name}, {row.First_Name} {row.Middle_Initial}</span>
-#               </div>
-#               <div class="card-body">
-#                 <strong>Permanent Address:</strong> {row.Permanent_Address}<br>
-#                 <strong>Current Address:</strong> {row.Current_Address}<br
-#                 <strong>Leaving With:</strong> {row.Leaving_With}<br>
-#                 <strong>Mother/Mobile No.:</strong> {row.Mother_and_Mobile}<br>
-#                 <strong>Father/Mobile:</strong> {row.Father_and_Mobile}<br>
-#                 <strong>Emergency Contact Person:</strong> {row.Emergency_Contact_Person}<br>
-#                 <strong>Email:</strong> {row.CEU_Mail}<br>
-#                 <strong>Mobile No.:</strong> {mobile}<br>
-#                 <strong>PhilHealth:</strong> {row.PhilHealth}<br>
-#                 <strong>PhilHealth Category:</strong> {row.PhilHealth_Category}<br>
-#                 <strong>Medical Insurance:</strong> {row.Medical_Insurance}<br>
-#                 <strong>List of Medical Insurance:</strong> {row.List_of_Medical_Insurance}<br>
-#                 <strong>Covid-19 Vaccine:</strong> {row.Covid19_Vaccine}<br>
-#                 <a href="{row.Vaccine_Id}" class="btn btn-outline-dark {btn_state}">Vaccination ID/Certificate</a>
-#               </div>
-#             </div>
-#         """, unsafe_allow_html=True)
+    st.markdown(f"""
+        <div class="card" style="margin-bottom: 2rem; color: #777;">
+            <div class="card-header">
+                <span style="font-size: 25px;"><strong>Name:</strong> {row.Last_Name}, {row.First_Name} {row.Middle_Initial}</span>
+            </div>
+              
+            <div class="card-body">
+                <strong>Permanent Address:</strong> {row.Permanent_Address}<br>
+                <strong>Current Address:</strong> {row.Current_Address}<br
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
 
 st.markdown(f"""
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
