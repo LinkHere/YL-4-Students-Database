@@ -49,10 +49,10 @@ for itrs, row in enumerate(rows):
     st.markdown(f"""
         <div class="card">
           <div class="card-header">
-            Name: {row.Last_Name}, {row.First_Name} {row.Middle_Initial}
+          Year Level 3
           </div>
           <div class="card-body">
-            <h5 class="card-title">Details</h5>
+            <h5 class="card-title">{row.Last_Name}, {row.First_Name} {row.Middle_Initial}</h5>
             <p class="card-text"><strong>Permanent Address:</strong> {row.Permanent_Address}</br>
             <strong>Current Address:</strong> {row.Current_Address}</br>
             <strong>Staying with Relatives?:</strong> {row.Staying_with_relatives}</br>
