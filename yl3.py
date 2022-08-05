@@ -60,6 +60,15 @@ for itrs, row in enumerate(rows):
             <strong>Staying with:</strong> {row.Staying_with}</br>
             <strong>Father's Name and No.:</strong> {row.Father_and_No}</br>
             <strong>Mother' Name and No.:</strong> {row.Mother_and_No}</br>
+            <strong>Emergency Contact Person:</strong> {row.Emergency_contact}</br>
+            <strong>CEU Mail:</strong> {row.CEU_mail}</br>
+            <strong>Mobile No.:</strong> {row.Mobile_no}</br>
+            <strong>PhilHealth?:</strong> {row.Philhealth}</br>
+            <strong>PhilHealth Category:</strong> {row.Philhealth_category}</br>
+            <strong>Other Medical Insurance?:</strong> {row.Other_Medical_Insurance}</br>
+            <strong>Medical Insurances:</strong> {row.Medical_Insurances}</br>
+            <strong>Covid19 Vaccine?</strong> {row.Covid19_vaccine}</br>
+            <strong>Vaccine ID:</strong> {row.Vaccine_id}</br>
             </p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
