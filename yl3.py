@@ -35,7 +35,8 @@ if selected:
 
     for itrs, row in enumerate(rows):
         
-        if 
+        if row.Mobile_no is not None:
+            mobile = int(row.Mobile_no)
         
         if row.Vaccine_id is not None:
             btn_state = ""
@@ -58,7 +59,7 @@ if selected:
                 <strong>Mother' Name and No.:</strong> {row.Mother_and_No}</br>
                 <strong>Emergency Contact Person:</strong> {row.Emergency_contact}</br>
                 <strong>CEU Mail:</strong> {row.CEU_mail}</br>
-                <strong>Mobile No.:</strong> {int(row.Mobile_no)}</br>
+                <strong>Mobile No.:</strong> {mobile}</br>
                 <strong>PhilHealth?:</strong> {row.PhilHealth}</br>
                 <strong>PhilHealth Category:</strong> {row.PhilHealth_category}</br>
                 <strong>Other Medical Insurance?:</strong> {row.Other_Medical_Insurance}</br>
